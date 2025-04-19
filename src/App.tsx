@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { VelocityProvider } from './context/VelocityContext';
+import VelocitySlider from './components/VelocitySlider';
+import GammaReadout from './components/GammaReadout';
+import MinkowskiDiagram from './components/MinkowskiDiagram';
+import GammaGraph from './components/GammaGraph';
+import ClockAnimation from './components/ClockAnimation';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: React.FC = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <VelocityProvider>
+      <div className="min-h-screen p-4">
+        <header className="mb-8 text-center">
+          <h1 className="text-4xl font-bold mb-4">Lorentzian Geometry Simulator</h1>
+          <p className="text-lg">Explore relativistic effects interactively.</p>
+        </header>
+        <main className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <section>
+            <VelocitySlider />
+            <GammaReadout />
+            <GammaGraph />
+          </section>
+          <section>
+            <MinkowskiDiagram />
+            <ClockAnimation />
+          </section>
+        </main>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </VelocityProvider>
+  );
+};
 
-export default App
+export default App;
