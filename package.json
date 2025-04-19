@@ -12,12 +12,14 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
     "@visx/visx": "^3",
+    "david-ai": "^1.0.6",
     "mathjax-react": "^2.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
+    "@tailwindcss/postcss": "^4.1.4",
     "@types/bun": "latest",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
@@ -28,6 +30,7 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
     "postcss": "^8.5.3",
+    "postcss-import": "^16.1.0",
     "tailwindcss": "^4.1.4",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.26.1",
