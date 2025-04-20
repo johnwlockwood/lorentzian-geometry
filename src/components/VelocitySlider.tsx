@@ -9,7 +9,7 @@ const VelocitySlider: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <label htmlFor="velocity-slider" className="block text-sm font-medium text-gray-700">
         Velocity (β)
       </label>
