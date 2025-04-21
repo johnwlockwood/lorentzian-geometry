@@ -1,8 +1,13 @@
 import { useContext, useState } from 'react';
 import { VelocityContext } from '../context/VelocityContext';
 import { Group } from '@visx/group';
+import { Text } from '@visx/text';
 
-const MinkowskiDiagram = () => {
+interface MinkowskiDiagramProps {
+  showCones?: boolean;
+}
+
+const MinkowskiDiagram = ({ showCones = true }: MinkowskiDiagramProps) => {
   const { beta } = useContext(VelocityContext);
   const [showGrid, setShowGrid] = useState(false);
   const width = 300;
@@ -45,6 +50,7 @@ const MinkowskiDiagram = () => {
             })}
           <line x1={midX} y1={0} x2={midX} y2={height} stroke="black" />
           <line x1={0} y1={midY} x2={width} y2={midY} stroke="black" />
+          {/* Future light cone edges */}
           <line
             x1={midX}
             y1={midY}
@@ -61,6 +67,55 @@ const MinkowskiDiagram = () => {
             stroke="red"
             strokeDasharray="5,5"
           />
+
+          {/* Past light cone edges */}
+          <line
+            x1={midX}
+            y1={midY}
+            x2={midX + 100}
+            y2={midY + 100}
+            stroke="red"
+            strokeDasharray="5,5"
+          />
+          <line
+            x1={midX}
+            y1={midY}
+            x2={midX - 100}
+            y2={midY + 100}
+            stroke="red"
+            strokeDasharray="5,5"
+          />
+
+          {/* Past light cone fill */}
+          {showCones && (
+            <path
+              d={`M ${midX} ${midY} L ${midX + 100} ${midY + 100} L ${midX - 100} ${midY + 100} Z`}
+              fill="rgba(255,0,0,0.1)"
+            />
+          )}
+
+          {/* Future light cone fill */}
+          {showCones && (
+            <path
+              d={`M ${midX} ${midY} L ${midX + 100} ${midY - 100} L ${midX - 100} ${midY - 100} Z`}
+              fill="rgba(0,0,255,0.1)"
+            />
+          )}
+
+          {/* Past cone label */}
+          {showCones && (
+            <Text
+              x={midX}
+              y={midY + 50}
+              width={100}
+              textAnchor="middle"
+              transform={`rotate(-45, ${midX}, ${midY + 50})`}
+              fontSize={10}
+              fill="red"
+            >
+              Past cone
+            </Text>
+          )}
           <line
             x1={midX}
             y1={midY}
