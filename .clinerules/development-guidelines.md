@@ -6,7 +6,7 @@ This document outlines the development practices and guidelines for the Lorentzi
 
 - Use TypeScript for all new code
 - Follow ESLint rules configured in the project
-- Use functional components with hooks for React components
+- Use functional components, written as normal functions with hooks for React components
 - Use named exports for components and utilities
 
 ## Component Structure

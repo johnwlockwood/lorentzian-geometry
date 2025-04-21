@@ -1,5 +1,6 @@
 import { VelocityProvider } from './context/VelocityContext';
 import VelocitySlider from './components/VelocitySlider';
+import Accordion from './components/Accordion';
 import GammaReadout from './components/GammaReadout';
 import MinkowskiDiagram from './components/MinkowskiDiagram';
 import GammaGraph from './components/GammaGraph';
@@ -42,6 +43,13 @@ const App = () => {
                 <h2 className="text-xl font-semibold mb-2">Minkowski Diagram</h2>
                 <p className="text-gray-600 mb-4">Plots spacetime (vertical = ct, horizontal = x). The orange world-line tilts with speed, while the 45° light-cone stays fixed.</p>
                 <MinkowskiDiagram />
+                <div className="mt-4">
+                  <Accordion title="Why it matters">
+                    <p className="text-gray-600">
+                      This diagram reveals causality. As the world‑line tilts closer to the cone, proper time along it shrinks—visualizing time dilation geometrically.
+                    </p>
+                  </Accordion>
+                </div>
               </div>
 
               <div>
