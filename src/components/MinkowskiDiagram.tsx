@@ -37,7 +37,7 @@ const MinkowskiDiagram = () => {
           y1={midY}
           x2={midX + worldLineX}
           y2={midY - lineLength}
-          stroke="blue"
+          stroke="orange"
           strokeWidth={2}
         />
       </Group>
