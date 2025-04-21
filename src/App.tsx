@@ -1,4 +1,3 @@
-import React from 'react';
 import { VelocityProvider } from './context/VelocityContext';
 import VelocitySlider from './components/VelocitySlider';
 import GammaReadout from './components/GammaReadout';
@@ -7,7 +6,7 @@ import GammaGraph from './components/GammaGraph';
 import ClockAnimation from './components/ClockAnimation';
 
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <VelocityProvider>
       <div className="flex flex-col items-center p-7 rounded-2xl min-h-screen">

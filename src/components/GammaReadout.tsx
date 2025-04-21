@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { VelocityContext } from '../context/VelocityContext';
 
-const GammaReadout: React.FC = () => {
+const GammaReadout = () => {
   const { gamma } = useContext(VelocityContext);
   return (
     <div>

@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { VelocityContext } from '../context/VelocityContext';
 import { Group } from '@visx/group';
 
-const MinkowskiDiagram: React.FC = () => {
+const MinkowskiDiagram = () => {
   const { beta } = useContext(VelocityContext);
   const width = 300;
   const height = 300;

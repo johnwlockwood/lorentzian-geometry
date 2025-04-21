@@ -1,7 +1,7 @@
-import React, { useContext, useState, useEffect } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { VelocityContext } from '../context/VelocityContext';
 
-const ClockAnimation: React.FC = () => {
+const ClockAnimation = () => {
   const { gamma } = useContext(VelocityContext);
   const [angle, setAngle] = useState(0);
 

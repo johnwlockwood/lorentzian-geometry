@@ -12,7 +12,13 @@ export const VelocityContext = createContext<VelocityContextType>({
   gamma: 1,
 });
 
-export const VelocityProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const VelocityProvider = (
+  {
+    children
+  }: {
+    children: React.ReactNode;
+  }
+) => {
   const [beta, setBeta] = useState(0);
 
   const gamma = useMemo(() => 1 / Math.sqrt(1 - beta * beta), [beta]);

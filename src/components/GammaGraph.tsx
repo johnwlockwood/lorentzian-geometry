@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { VelocityContext } from '../context/VelocityContext';
 import { scaleLinear } from '@visx/scale';
 import { LinePath } from '@visx/shape';
@@ -8,7 +8,7 @@ interface Point {
   gamma: number;
 }
 
-const GammaGraph: React.FC = () => {
+const GammaGraph = () => {
   const { beta, gamma } = useContext(VelocityContext);
   const width = 300;
   const height = 200;

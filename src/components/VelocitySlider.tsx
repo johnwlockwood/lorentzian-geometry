@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { VelocityContext } from '../context/VelocityContext';
 
-const VelocitySlider: React.FC = () => {
+const VelocitySlider = () => {
   const { beta, setBeta } = useContext(VelocityContext);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
