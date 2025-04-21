@@ -40,16 +40,19 @@ const App = () => {
           <section>
             <div className="space-y-8">
               <div>
-                <h2 className="text-xl font-semibold mb-2">Minkowski Diagram</h2>
-                <p className="text-gray-600 mb-4">Plots spacetime (vertical = ct, horizontal = x). The orange world-line tilts with speed, while the 45° light-cone stays fixed.</p>
-                <MinkowskiDiagram />
-                <div className="mt-4">
-                  <Accordion title="Why it matters">
+                <div className="mt-4 mb-4">
+                  <Accordion title="Minkowski Diagram">
+                    <h3 className="text-l font-semibold">What it does</h3>
+                    <p className="text-gray-600">
+                      Plots spacetime (vertical = ct, horizontal = x). The orange world-line tilts with speed, while the 45° light-cone stays fixed.
+                    </p>
+                    <h3 className="text-l font-semibold mt-4">Why it matters</h3>
                     <p className="text-gray-600">
                       This diagram reveals causality. As the world‑line tilts closer to the cone, proper time along it shrinks—visualizing time dilation geometrically.
                     </p>
                   </Accordion>
                 </div>
+                <MinkowskiDiagram />
               </div>
 
               <div>
