@@ -12,26 +12,26 @@ const App = () => {
     <VelocityProvider>
       <div className="flex flex-col items-center p-7 rounded-2xl min-h-screen">
         <header className="mb-8 text-center">
-          <h1 className="text-4xl font-bold mb-4">Lorentzian Geometry Simulator</h1>
+          <h1 className="text-4xl font-bold mb-4 text-shadow-md">Lorentzian Geometry Simulator</h1>
           <p className="text-lg">Explore relativistic effects interactively.</p>
         </header>
         <main className="grid grid-cols-2 md:grid-cols-2 gap-8">
           <section>
             <div className="space-y-8">
               <div>
-                <h2 className="text-xl font-semibold mb-2">Velocity Slider</h2>
+                <h2 className="text-xl font-semibold mb-2 text-shadow-md">Velocity Slider</h2>
                 <p className="text-gray-600 mb-4">Lets you set a speed as a fraction of light-speed (β = v/c). Dragging it instantly updates every other graphic.</p>
                 <VelocitySlider />
               </div>
               
               <div>
-                <h2 className="text-xl font-semibold mb-2">Gamma Readout</h2>
+                <h2 className="text-xl font-semibold mb-2 text-shadow-md">Gamma Readout</h2>
                 <p className="text-gray-600 mb-4">Shows the Lorentz factor γ, computed from the slider's speed. Think of γ as the "stretch factor" for time and space.</p>
                 <GammaReadout />
               </div>
 
               <div>
-                <h2 className="text-xl font-semibold mb-2">Gamma Graph</h2>
+                <h2 className="text-xl font-semibold mb-2 text-shadow-md">Gamma Graph</h2>
                 <p className="text-gray-600 mb-4">Charts γ versus β as a curve. A moving marker tracks the slider's position.</p>
                 <GammaGraph />
               </div>
@@ -40,7 +40,7 @@ const App = () => {
           <section>
             <div className="space-y-8">
               <div>
-                <h2 className="text-xl font-semibold mb-2">Minkowski Diagram</h2>
+                <h2 className="text-xl font-semibold mb-2 text-shadow-md">Minkowski Diagram</h2>
                 <MinkowskiDiagram />
                 <div className="mt-4 mb-4">
                   <Accordion title="Minkowski Diagram details">
@@ -58,7 +58,7 @@ const App = () => {
 
                     <h3 className="text-l font-semibold mt-4">Light cone:</h3>
                     <p className="text-gray-600">The 45° diagonals are light rays. They carve spacetime into three regions:</p>
-                    <ul className="list-disc list-inside">
+                    <ul className="list-disc list-inside text-gray-600">
                       <li>Future cone — events you can influence, because signals leaving the origin at ≤c will reach them.</li>
                       <li>Past cone — events that could influence you, because their light can reach the origin.</li>
                       <li>Elsewhere — spacelike-separated events outside the cones; no signal obeying relativity can get there in time, so they're causally disconnected.</li>
@@ -76,7 +76,7 @@ const App = () => {
               </div>
 
               <div>
-                <h2 className="text-xl font-semibold mb-2">Clock Animation</h2>
+                <h2 className="text-xl font-semibold mb-2 text-shadow-md">Clock Animation</h2>
                 <p className="text-gray-600 mb-4">Two clocks tick side-by-side. The left clock measures coordinate time ("stationary observer"), the right clock measures proper time aboard the moving spaceship.</p>
                 <ClockAnimation />
               </div>
