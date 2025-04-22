@@ -8,9 +8,64 @@ export default function HeroHeader() {
           {/* Cosmic/starfield SVG background */}
           <svg
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover animate-pulse opacity-20"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ backgroundColor: 'black' }}
           >
-            {/* tiny star circles here or import an asset */}
+            {/* Black background rectangle */}
+            <rect x="0" y="0" width="100%" height="100%" fill="black" />
+            
+            {/* Generate 200 small stars with random properties */}
+            {Array.from({ length: 200 }).map((_, i) => {
+              const size = Math.random() * 1.5 + 0.5;
+              const x = Math.random() * 100;
+              const y = Math.random() * 100;
+              const opacity = Math.random() * 0.7 + 0.3;
+              // Add color variation for some stars
+              const fill = Math.random() > 0.9 
+                ? '#b6caff' // Light blue for some stars
+                : Math.random() > 0.9 
+                  ? '#eed9ff' // Light purple for some stars
+                  : 'white'; // Most stars are white
+              
+              return (
+                <circle
+                  key={i}
+                  cx={`${x}%`}
+                  cy={`${y}%`}
+                  r={size}
+                  fill={fill}
+                  opacity={opacity}
+                />
+              );
+            })}
+            
+            {/* Add 15 larger stars with glow effect */}
+            {Array.from({ length: 15 }).map((_, i) => {
+              const size = Math.random() * 1 + 1.5;
+              const x = Math.random() * 100;
+              const y = Math.random() * 100;
+              
+              return (
+                <g key={`glow-${i}`}>
+                  {/* Glow effect */}
+                  <circle
+                    cx={`${x}%`}
+                    cy={`${y}%`}
+                    r={size * 2}
+                    fill="white"
+                    opacity="0.05"
+                  />
+                  {/* Star center */}
+                  <circle
+                    cx={`${x}%`}
+                    cy={`${y}%`}
+                    r={size}
+                    fill="white"
+                    opacity="0.8"
+                  />
+                </g>
+              );
+            })}
           </svg>
 
           <h1 className="relative z-10 text-5xl md:text-7xl font-extrabold tracking-tight drop-shadow-lg">
