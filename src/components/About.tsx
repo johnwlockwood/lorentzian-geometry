@@ -14,14 +14,15 @@ export default function About() {
           mind-bending world of <strong>special relativity</strong>, where time
           and space twist in ways that challenge our everyday intuition.
           Inspired by my high school physics class and the captivating ideas of
-          physicist <a
+          physicist{" "}
+          <a
             href="https://muller.lbl.gov"
             title="Visit Richard A. Muller's homepage"
           >
             Richard A. Muller
-          </a>, I created this site to make these slippery
-          concepts easier to grasp—for myself, for curious minds like my young
-          nephew, and for you.
+          </a>
+          , I created this site to make these slippery concepts easier to
+          grasp—for myself, for curious minds like my young nephew, and for you.
         </p>
 
         <h2 className="text-2xl font-semibold mb-3 text-blue-700">
@@ -80,9 +81,10 @@ export default function About() {
         </ul>
         <p className="text-lg mb-6">
           These tools are just the start. Inspired by Muller’s{" "}
-          <em>Descriptive Physics</em> and his book <em>Now</em>, which reframes
-          time as the ever-expanding edge of the universe, we’re building more
-          ways to visualize and understand relativity’s magic.
+          <em>Physics for Future Presidents</em> and his book{" "}
+          <em>Now: The Physics of Time</em>, which reframes time as the
+          ever-expanding edge of the universe, we’re building more ways to
+          visualize and understand relativity’s magic.
         </p>
 
         <h2 className="text-2xl font-semibold mb-3 text-blue-700">
