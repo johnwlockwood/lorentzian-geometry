@@ -2,7 +2,7 @@
  * MainDiagram.tsx
  * ----------------------------------------- */
 import VelocitySlider from "./VelocitySlider";
-import Accordion from "./Accordion";
+// import Accordion from "./Accordion";
 import GammaReadout from "./GammaReadout";
 import MinkowskiDiagram from "./MinkowskiDiagram";
 import GammaGraph from "./GammaGraph";
@@ -40,10 +40,10 @@ export default function MainDiagram() {
                   <h2 className="text-xl font-semibold mb-2 text-shadow-md">
                     Gamma Graph
                   </h2>
-                  <p className="text-gray-600 mb-4">
+                  {/* <p className="text-gray-600 mb-4">
                     Charts γ versus β as a curve. A moving marker tracks the
                     slider's position.
-                  </p>
+                  </p> */}
                   <GammaGraph />
                 </div>
               </div>
@@ -55,7 +55,7 @@ export default function MainDiagram() {
                     Minkowski Diagram
                   </h2>
                   <MinkowskiDiagram />
-                  <div className="mt-4 mb-4">
+                  {/* <div className="mt-4 mb-4">
                     <Accordion title="Minkowski Diagram details">
                       <h3 className="text-l font-semibold">What it does</h3>
                       <p className="text-gray-600">
@@ -138,18 +138,18 @@ export default function MainDiagram() {
                         speed of light is the same in every frame.
                       </p>
                     </Accordion>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div>
                   <h2 className="text-xl font-semibold mb-2 text-shadow-md">
                     Clock Animation
                   </h2>
-                  <p className="text-gray-600 mb-4">
+                  {/* <p className="text-gray-600 mb-4">
                     Two clocks tick side-by-side. The left clock measures
                     coordinate time ("stationary observer"), the right clock
                     measures proper time aboard the moving spaceship.
-                  </p>
+                  </p> */}
                   <ClockAnimation />
                 </div>
               </div>
